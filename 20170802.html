@@ -1,0 +1,70 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        div {
+            background-color: goldenrod;
+            margin-top: lem;
+            height: 50px;
+        }
+        
+        #main {
+            height: 200px;
+        }
+        
+        @media(min-width:760px) {
+            #main,
+            #apas {
+                height: 200px;
+                display: inline-block;
+            }
+            #main {
+                width: 80%;
+            }
+            #apas {
+                width: 15%;
+            }
+        }
+        
+        @media(min-width:1000px) {
+            #sidebar {
+                height: 200px;
+                width: 20%;
+                display: inline-block;
+            }
+            #main {
+                width: 60%;
+            }
+            #apas {
+                width: 15%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    my web
+    <div id="header" style="background-color: red">header</div>
+    <div id="apas" style="background-color:aqua">Apsa</div>
+    <div id="main" style="background-color:azure">main</div>
+    <div id="sidebar" style="background-color:blue">sidebar</div>
+    <div id="foot" style="background-color:brown">foot</div>
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+</html>

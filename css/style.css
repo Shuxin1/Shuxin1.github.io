@@ -13,18 +13,17 @@ html {
     .container {
         width: 350px;
     }
-}
-
-#home {
-    background: url(../img/bg1.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    height: auto;
-    min-height: 710px;
-    padding-top: 60px;
-    color: #ffffff;
+    #home {
+        background: url(../img/bg1.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        height: auto;
+        min-height: 710px;
+        padding-top: 60px;
+        color: #ffffff;
+    }
 }
 
 #meet-us,

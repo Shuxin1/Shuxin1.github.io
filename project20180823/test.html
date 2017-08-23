@@ -1,0 +1,110 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!-- 引入 ECharts 文件 -->
+    <script src="js/echarts.js.js"></script>
+</head>
+
+<body>
+    <div id="main" style="width: 800px; height: 1000px; -webkit-tap-highlight-color: transparent; user-select: none; background: transparent;" _echarts_instance_="ec_1501731495442">
+        <div style="position: relative; overflow: hidden; width: 600px; height: 1000px; padding: 0px; margin: 0px; border-width: 0px; cursor: default;"><canvas width="900" height="600" data-zr-dom-id="zr_0" style="position: absolute; left: 0px; top: 0px; width: 600px; height: 400px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div>
+    </div>
+    <script type="text/javascript">
+        var myChart = echarts.init(document.getElementById('main'));
+
+
+        // app.title = '18年来传销组织包装方式演变'; 
+        var option = { // title: { // text: '18年来传销组织“主流”包装方式演变', //
+            subtext: '数据来自Openlaw 1999-2016年传销组织判决书',
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: {
+                    type: 'shadow'
+                }
+            },
+            legend: {
+                data: ['消费返利', '连锁销售', '循环销售', '自愿连锁经营、资本运作', '网络传销、微商', '旅游创业、低价旅游', '招聘', '免费购物', '慈善、爱心捐助', '养老']
+            },
+            grid: {
+                left: '3%',
+                right: '4%',
+                bottom: '3%',
+                containLabel: true
+            },
+            xAxis: {
+                type: 'value',
+                boundaryGap: [0, 0.01]
+            },
+            yAxis: {
+                type: 'category',
+                minInterval: 100,
+                data: ['2014-2016年', '2011-2013年', '2008-2010年', '2005-2007年', '2002-2004年', '1999-2001年']
+            },
+            series: [{
+                name: '消费返利',
+                type: 'bar',
+                barWidth: '10',
+                data: [0.05, 0.214, 0.002, 0.4, 0.867, 0.875, ]
+            }, {
+                name: '连锁销售',
+                type: 'bar',
+                barWidth: '10',
+                data: [0, 0, 0, 0, 0.133, 0.125]
+            }, {
+                name: '循环销售',
+                type: 'bar',
+                barWidth: '10',
+                data: [0.007, 0.376, 0.49, 0.6, 0, 0]
+            }, {
+                name: '自愿连锁经营、资本运作',
+                type: 'bar',
+                barWidth: '10',
+                data: [0.452, 0.254, 0.137, 0, 0, 0]
+            }, {
+                name: '网络传销、微商',
+                type: 'bar',
+                barWidth: '10',
+                data: [0.328, 0.374, 0.431, 0, 0, 0]
+            }, {
+                name: '旅游创业、低价旅游',
+                type: 'bar',
+                barWidth: '10',
+                itemStyle: {
+                    normal: {
+                        label: {
+                            show: true,
+                            position: 'inside', //数据在中间显示
+                            formatter: '{c}%' //百分比显示
+                        }
+                    }
+                },
+                data: [0.059, 0.038, 0.02, 0, 0, 0]
+            }, {
+                name: '招聘',
+                type: 'bar',
+                barWidth: '10',
+                data: [0.014, 0.016, 0.02, 0, 0, 0]
+            }, {
+                name: '免费购物',
+                type: 'bar',
+                barWidth: '10',
+                data: [0.012, 0.05, 0, 0, 0, 0]
+            }, {
+                name: '慈善、爱心捐助',
+                type: 'bar',
+                barWidth: '10',
+                data: [0.013, 0.019, 0, 0, 0, 0]
+            }, {
+                name: '养老',
+                type: 'bar',
+                barWidth: '10',
+                data: [0.0097, 0.096, 0, 0, 0, 0]
+            }]
+        };
+        myChart.setOption(option);
+    </script>
+
+</body>
+
+</html>

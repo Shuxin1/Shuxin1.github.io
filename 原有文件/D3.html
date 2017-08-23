@@ -1,0 +1,119 @@
+<html>
+
+<head>
+    <script src="https://d3js.org/d3.v4.js"></script>
+
+</head>
+
+<body>
+    <div id="chart">
+        <svg width="300" height="200"></svg>
+
+    </div>
+
+    <script>
+        var svg = d3.select('#chart svg') // svg 里面#表示选中，chart是上面的“id=chart”
+            //     .append('circle')
+            //     .attr('cx', 50)
+            //     .attr('cy', 160)
+            //     .attr('r', 10)
+
+        var data = [{
+            Country: 'A',
+            GDP: 120,
+            Life: 50,
+            Population: 50
+        }, {
+            Country: 'B',
+            GDP: 50,
+            Life: 50,
+            Population: 100
+        }, {
+            Country: 'C',
+            GDP: 200,
+            Life: 80,
+            Population: 100
+        }];
+        // 上面是javascript的object文件，跟json文件很类似
+        var data2 = [{
+            Country: 'A',
+            GDP: 30,
+            Life: 30,
+            Population: 50
+        }, {
+            Country: 'B',
+            GDP: 40,
+            Life: 20,
+            Population: 100
+        }, {
+            Country: 'D',
+            GDP: 10,
+            Life: 50,
+            Population: 100
+        }];
+
+        function updateChart(data) {
+            var circles = svg
+                .selectAll('circle')
+                .data(data, function(d, i) {
+                    return d['Country']
+                })
+
+
+
+            circles
+                .enter()
+                .append('circle')
+                .merge(circles)
+                .transition()
+                .attr('r', 10)
+                .attr('cx', function(d, i) {
+                    // console.log(d)
+                    // console.log(i)
+
+
+                    return d['GDP']
+                })
+                .attr('cy', function(d, i) {
+                    // console.log(d)
+                    // console.log(i)
+
+                    return d['Life']
+                })
+
+            circles
+                .exit()
+                .transition()
+                .style("fill", "rgba(0,0,0,0)")
+                .on("end", function() {
+
+                    d3.select(this).remove()
+                })
+        }
+        updateChart(data)
+        setTimeout(function() {
+            updateChart(data2)
+        }, 3000)
+    </script>
+</body>
+
+
+</html>
+
+<!-- <svg width="300" height="200">
+ +            <circle r=20 cx=70 cy=170></circle>
+                        <circle r=20 cx=50 cy=50></circle>
+                                  <circle r=20 cx=150 cy=150></circle>
+                                  
+ @@ -22,8 +71,4 @@
+               </text>
+  </g>
+                  
+ -        </svg>
+ -    </div>
+ -</body>
+ -
+ -</html> 
+ +        </svg> -->
+
+</html>

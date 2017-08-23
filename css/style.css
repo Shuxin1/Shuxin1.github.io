@@ -27,6 +27,24 @@ html {
     color: #ffffff;
 }
 
+#meet-us,
+#services,
+#works,
+#about-us {
+    padding: 5px 0;
+}
+
+a.down-btn span.fa.fa-angle-down {
+    font-size: 26px;
+    border: 1px solid #c59a6d;
+    border-radius: 2px;
+    padding: 7px 3px;
+    position: center;
+    cursor: pointer;
+    color: #c59a6d;
+    margin-top: 30px;
+}
+
 @media (min-width: 1200px) {
     .container {
         width: 800px;
